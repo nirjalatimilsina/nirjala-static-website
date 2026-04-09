@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="skills.html">Skills</a></li>
+                        <li><a href="index.html#documents">Documents</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <a href="contact.html" class="btn btn-primary">Hire Me</a>
