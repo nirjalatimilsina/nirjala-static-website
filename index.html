@@ -1,100 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Portfolio | System Admin & Linux Expert</title>
-    <meta name="description"
-        content="Portfolio of a skilled IT student specializing in System Administration, Server Management, and Linux.">
+    <title>Nirjala | BIT Student & Frontend Developer</title>
+    <meta name="description" content="Modern portfolio of a BIT student and future software engineer specializing in frontend development.">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Scripts -->
     <script src="js/components.js" defer></script>
 </head>
-
 <body>
 
-    <header></header>
+    <header id="header"></header>
 
     <main>
-        <section class="hero">
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero">
+            <div class="floating-icon icon-react"><i class="devicon-react-original"></i></div>
+            <div class="floating-icon icon-js"><i class="devicon-javascript-plain"></i></div>
+            <div class="floating-icon icon-python"><i class="devicon-python-plain"></i></div>
+            <div class="floating-icon icon-html"><i class="devicon-html5-plain"></i></div>
+
             <div class="container">
                 <div class="hero-content">
-                    <span class="hero-badge">Available for Projects</span>
-                    <h1>I Build & Manage <br><span style="color: var(--primary-red);">Reliable Systems.</span></h1>
-                    <p style="max-width: 600px; font-size: 1.2rem; margin-bottom: 2rem;">
-                        IT Student dedicated to mastering System Administration, Server Management, and the Linux
-                        ecosystem. Expert in streamlining operations using Microsoft Office tools.
-                    </p>
-                    <div style="display: flex; gap: 1rem;">
-                        <a href="skills.html" class="btn btn-primary">View Skills</a>
-                        <a href="contact.html" class="btn btn-outline">Contact Me</a>
+                    <h1>BIT Student & <br><span class="text-gradient">Future Software Engineer</span></h1>
+                    
+                    <div class="typing-text" id="typing-text"></div>
+                    
+                    <p>I design and develop modern web applications, explore software engineering concepts, and continuously improve my programming and problem-solving skills.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-laptop-code"></i> View Projects</a>
+                        <a href="#resume" class="btn btn-outline"><i class="fa-solid fa-download"></i> Download CV</a>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-container">
+                        <img src="assets/profile.png" alt="Professional Profile Image" onerror="this.src='https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&q=80&w=800'">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about">
             <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
                     <div>
-                        <h2>About Me</h2>
-                        <p>
-                            I am an IT student with a passion for infrastructure and system optimization. My focus lies
-                            in ensuring uptime, security, and efficiency across server environments and enterprise
-                            tools.
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                            As a passionate BIT student, my journey is driven by an insatiable curiosity for how things work under the hood. I specialize in building responsive, user-friendly frontend web applications, while continuously expanding my knowledge in backend technologies and software architecture.
                         </p>
-                        <ul style="margin-top: 1rem; list-style: none;">
-                            <li style="margin-bottom: 0.5rem;">✅ Red Hat Enterprise Linux & Ubuntu Server</li>
-                            <li style="margin-bottom: 0.5rem;">✅ Active Directory & User Management</li>
-                            <li style="margin-bottom: 0.5rem;">✅ Advanced Excel & Office Automation</li>
-                        </ul>
+                        <p style="font-size: 1.1rem; color: var(--text-muted);">
+                            My goal is to write clean, efficient code and create digital experiences that look beautiful and perform exceptionally.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <div class="stat-num">3+</div>
+                                <div class="stat-label">Years of Coding</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-num">20+</div>
+                                <div class="stat-label">Projects Built</div>
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        style="background: var(--light-gray); height: 400px; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative;">
-                        <!-- You can replace this with  a personal photo later -->
-                        <div style="text-align: center; color: var(--accent-blue);">
-                            <div style="font-size: 4rem;">👨‍💻</div>
-                            <p style="font-weight: 600;">Hardware & Network Analyst</p>
+                    <div style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border);">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--text-main);">Education</h3>
+                        <div style="margin-bottom: 1.5rem; padding-left: 1rem; border-left: 2px solid var(--accent-red);">
+                            <h4 style="font-size: 1.1rem;">Bachelor in Information Technology (BIT)</h4>
+                            <p style="color: var(--accent-blue); font-size: 0.9rem; margin-bottom: 0.5rem;">University Name | 2023 - Present</p>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Focusing on software engineering, web development, algorithms, and data structures.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="documents">
+        <!-- Skills Section -->
+        <section id="skills">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <h2>Professional Documents</h2>
-                    <p>Download my professional credentials and detailed work history.</p>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="devicon-html5-plain colored skill-icon"></i>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-css3-plain colored skill-icon"></i>
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-javascript-plain colored skill-icon"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-react-original colored skill-icon"></i>
+                        <h3>React</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-python-plain colored skill-icon"></i>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-mysql-plain colored skill-icon"></i>
+                        <h3>MySQL</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-git-plain colored skill-icon"></i>
+                        <h3>Git & GitHub</h3>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="docs-grid">
-                    <!-- CV Card -->
-                    <div class="doc-card">
-                        <span class="doc-status status-available">Ready to Download</span>
-                        <div class="doc-icon">📄</div>
-                        <h3>Curriculum Vitae (CV)</h3>
-                        <p>Detailed overview of my academic background, skills, and certifications in the IT field.</p>
-                        <a href="assets/cv.pdf" class="btn btn-outline" download>Download CV</a>
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/project1.png" alt="Project 1" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Node.js</span>
+                            </div>
+                            <h3 class="project-title">Modern Web Dashboard</h3>
+                            <p class="project-desc">A sleek, dark-mode analytics dashboard with real-time data visualization and modern glowing accents.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="fa-solid fa-eye"></i> Live Demo</a>
+                                <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/project2.png" alt="Project 2" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">HTML/CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <p class="project-desc">Responsive e-commerce website with glassmorphism UI, smooth animations, and premium layout.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="fa-solid fa-eye"></i> Live Demo</a>
+                                <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/project3.png" alt="Project 3" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Data Vis</span>
+                            </div>
+                            <h3 class="project-title">Analytics App</h3>
+                            <p class="project-desc">Futuristic data visualization web application featuring glowing charts and a robust dark theme.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="fa-solid fa-eye"></i> Live Demo</a>
+                                <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Resume Card -->
-                    <div class="doc-card">
-                        <span class="doc-status status-pending">Coming Soon</span>
-                        <div class="doc-icon">💼</div>
-                        <h3>Professional Resume</h3>
-                        <p>A concise snapshot of my professional experience and key achievements. Currently being
-                            updated.</p>
-                        <a href="#" class="btn btn-outline" style="opacity: 0.5; pointer-events: none;">Not
-                            Available</a>
-                    </div>
+        <!-- Resume Section -->
+        <section id="resume">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title">Resume & Documents</h2>
+                <div style="max-width: 600px; margin: 0 auto; background: var(--glass-bg); padding: 3rem; border-radius: 24px; border: 1px solid var(--glass-border); backdrop-filter: blur(10px);">
+                    <i class="fa-solid fa-file-pdf" style="font-size: 4rem; color: var(--accent-red); margin-bottom: 1.5rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Professional Resume</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Download my updated resume to view my academic background, projects, and technical skills in detail.</p>
+                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download CV (PDF)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Hello, I would like to discuss..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fa-regular fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer></footer>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Nirjala. Built with ❤️ and Modern Web Technologies.</p>
+        </div>
+    </footer>
 
 </body>
-
 </html>
