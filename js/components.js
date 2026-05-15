@@ -1,71 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Inject Navbar
-    const header = document.getElementById('header');
-    if (header) {
-        header.innerHTML = `
-            <div class="container">
-                <nav>
-                    <a href="#home" class="logo">Nirjala<span>.</span></a>
-                    <ul class="nav-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        `;
+    
+    // 1. Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-menu a');
+    
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = hamburger.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
     }
 
-    // Typing Animation
-    const typingText = document.getElementById('typing-text');
-    if (typingText) {
-        const words = ['Web Developer', 'BIT Student', 'Software Engineering Learner'];
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        
-        function typeEffect() {
-            const currentWord = words[wordIndex];
-            
-            if (isDeleting) {
-                typingText.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingText.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-            }
-            
-            let typingSpeed = isDeleting ? 50 : 150;
-            
-            if (!isDeleting && charIndex === currentWord.length) {
-                typingSpeed = 2000; // Pause at end of word
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-                typingSpeed = 500; // Pause before new word
-            }
-            
-            setTimeout(typeEffect, typingSpeed);
-        }
-        
-        // Start typing effect
-        setTimeout(typeEffect, 1000);
-    }
+    // 2. Sticky Navbar
+    const navbar = document.getElementById('navbar');
     
-    // Sticky Header Effect on Scroll
-    window.addEventListener('scroll', () => {
-        if (header) {
+    if (navbar) {
+        window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                header.style.background = 'rgba(11, 17, 32, 0.95)';
-                header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+                navbar.classList.add('scrolled');
             } else {
-                header.style.background = 'rgba(11, 17, 32, 0.8)';
-                header.style.boxShadow = 'none';
+                navbar.classList.remove('scrolled');
             }
-        }
+        });
+    }
+
+    // 3. Scroll Fade-In Animation
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    
+    const fadeObserverOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const fadeObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Optional: stop observing once visible
+            }
+        });
+    }, fadeObserverOptions);
+
+    fadeElements.forEach(element => {
+        fadeObserver.observe(element);
     });
 });
