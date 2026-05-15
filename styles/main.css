@@ -63,6 +63,20 @@ section {
     margin-bottom: 0.5rem;
 }
 
+.section-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 3rem;
+    transition: var(--transition);
+}
+
+.section-box:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+}
+
 .section-subtitle {
     color: var(--text-muted);
     font-size: 1.1rem;
@@ -358,16 +372,16 @@ nav.scrolled {
 }
 
 .skill-category-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background-color: transparent;
+    border: 1px solid var(--border-glass);
     border-radius: 8px;
-    padding: 2rem;
+    padding: 1.5rem;
     transition: var(--transition);
 }
 
 .skill-category-card:hover {
-    border-color: #444;
-    transform: translateY(-3px);
+    border-color: var(--border-color);
+    background-color: rgba(255, 255, 255, 0.02);
 }
 
 .skill-category-card h3 {
@@ -461,16 +475,16 @@ nav.scrolled {
 }
 
 .project-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background-color: transparent;
+    border: 1px solid var(--border-glass);
     border-radius: 8px;
-    padding: 2rem;
+    padding: 1.5rem;
     transition: var(--transition);
 }
 
 .project-card:hover {
-    border-color: #555;
-    transform: translateY(-5px);
+    border-color: var(--border-color);
+    background-color: rgba(255, 255, 255, 0.02);
 }
 
 .project-card h4 {
@@ -528,15 +542,16 @@ nav.scrolled {
 }
 
 .timeline-content {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background-color: transparent;
+    border: 1px solid var(--border-glass);
     border-radius: 8px;
     padding: 1.5rem 2rem;
     transition: var(--transition);
 }
 
 .timeline-content:hover {
-    border-color: #444;
+    border-color: var(--border-color);
+    background-color: rgba(255, 255, 255, 0.02);
 }
 
 .timeline-date {
@@ -618,9 +633,9 @@ nav.scrolled {
 }
 
 .contact-form {
-    background-color: var(--bg-main);
-    border: 1px solid var(--border-color);
-    padding: 2.5rem;
+    background-color: transparent;
+    border: 1px solid var(--border-glass);
+    padding: 2rem;
     border-radius: 8px;
 }
 
